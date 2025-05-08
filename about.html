@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      border: 2px solid #4abcd4;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #4abcad;
+      color: rgb(250, 242, 242);
+      border-color: #4abcad;
+    }
+
+    nav a.active {
+      background-color: #4abcad; /* Specific color for "About" button */
+      color: white;
+      border-color: #4abcad;
+    }
+
+    #about {
+  padding: 65px;
+  background-color: #b2dfd9;
+}
+
+
+    .about-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 90px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-image img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(43, 42, 42, 0.2);
+    }
+
+    .about-details {
+      flex: 1;
+    }
+
+    .about-details h2 {
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: #0b0b0b;
+    }
+
+    .about-details p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #363535;
+    }
+
+    .about-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .about-info p {
+      margin: 6px 0;
+    }
+
+    .about-image img {
+      width: 300px;
+      height: 300px; 
+      border-radius: 50%;
+      border: 6px solid #1994ad;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(43, 42, 42, 0.2);
+      animation: float 3s ease-in-out infinite, pulse-border 2.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-image:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    .name-heading {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="name-heading" style="color: rgb(12, 111, 111);">PORTFOLIO</header>
+
+  <nav>
+    <a href="web.html" class="name-heading">Home</a>
+    <a href="about.html" class="name-heading active">About</a>
+    <a href="quality.html" class="name-heading">Quality</a>
+    <a href="skill.html" class="name-heading">Skill</a>
+    <a href="project.html" class="name-heading">Projects</a>
+    <a href="blog.html" class="name-heading">Credentials</a>
+    <a href="contact.html" class="name-heading">Contact</a>
+  </nav>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="2.jpg" alt="Nishanthi Senthilkumar">
+      </div>
+      <div class="about-details">
+        <h2 class="name-heading" style="color : rgb(4, 80, 80)";>VLSI Design & Web Developer</h2>
+        <p>Hi, I’m Nishanthi S, a VLSI Design Engineer and also a Web developer with a specialization in RTL coding and HTML. I am passionate about exploring new technologies and creating innovative solutions. My expertise extends to programming languages like Java, JavaScript, HTML, and Python, and I enjoy working on projects that merge hardware and software, particularly in the development of embedded systems.</p>
+
+        <div class="about-info">
+          <div>
+            <p><strong>Name:</strong> Nishanthi S</p>
+            <p><strong>Degree:</strong> B.E</p>
+            <p><strong>Email:</strong> nishasenthil27070@gmail.com</p>
+          </div>
+          <div>
+            <p><strong>Birthday:</strong> 27/07/2004</p>
+            <p><strong>Phone:</strong> +91 80729 97261</p>
+            <p><strong>Address:</strong> 5/111(A2), Valliyappampatti, Namakkal, TamilNadu - 639107</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

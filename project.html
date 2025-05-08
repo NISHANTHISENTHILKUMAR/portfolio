@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      margin: 0 10px;
+      padding: 8px 15px;
+      border: 2px solid #4abcad;
+      border-radius: 5px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #4abcad;
+      color: white;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+      text-align: left;
+    }
+
+    .hero .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .icons a {
+      margin: 0 10px;
+      color: black;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .section-title {
+      color: teal;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .project, .contact-form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #f5f5f5;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: teal;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgb(165, 240, 240);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      font-size: 24px;
+      color: white;
+    }
+
+    .project-title {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes pulse-border {
+      0% {
+        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.4);
+      }
+    }
+
+    h2 {
+      color: teal;
+      margin-top: 40px;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      padding: 40px 20px;
+    }
+
+    .project-box {
+      background: #fff;
+      border: 1px solid #4abcd4;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 10px #47b6cc;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .project-box:nth-child(1) { animation-delay: 0.2s; }
+    .project-box:nth-child(2) { animation-delay: 0.4s; }
+    .project-box:nth-child(3) { animation-delay: 0.6s; }
+    .project-box:nth-child(4) { animation-delay: 0.8s; }
+    .project-box:nth-child(5) { animation-delay: 1.0s; }
+    .project-box:nth-child(6) { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-box p {
+      font-size: 0.95em;
+      color: #444;
+      text-align: center;
+      border-radius: 20px 5px 20px 5px;
+    }
+
+    .name-heading {
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav a.active {
+      background: #4abcad; /* Highlight the active button */
+      color: white;
+      border-color: #4abcad;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="name-heading" style="color: rgb(12, 111, 111);">PORTFOLIO</h1>
+    <nav>
+      <a href="web.html" class="name-heading">Home</a>
+      <a href="about.html" class="name-heading">About</a>
+      <a href="quality.html" class="name-heading">Quality</a>
+      <a href="skill.html" class="name-heading">Skill</a>
+      <a href="project.html" class="name-heading active">Projects</a>
+      <a href="blog.html" class="name-heading">Credentials</a>
+      <a href="contact.html" class="name-heading">Contact</a>
+    </nav>
+  </header>
+
+  <h2 class="name-heading">MY PROJECT</h2>
+
+  <div class="projects-container">
+    <div class="project-box">
+      <div class="icon-circle">🔬</div>
+      <h3 class="project-title">VLSI Design</h3>
+      <p>Designed a three-chamber pacemaker using Verilog to simulate synchronized electrical pacing of the atrium, right ventricle, and left ventricle for coordinated heart function.</p>
+    </div>
+    <div class="project-box">
+      <div class="icon-circle">🕸️</div> 
+      <h3 class="project-title">Neural Network</h3>
+      <p>Developed an automated railway crack detection system using CNN to identify track defects in real time and provide alerts with crack severity and GPS location.</p>
+    </div>
+    <div class="project-box">
+      <div class="icon-circle">🛠️</div>
+      <h3 class="project-title">Embedded Systems</h3>
+      <p>Using the MPPT Algorithm ,Designed a high-efficiency DC-DC converter for a solar-powered drone to regulate and optimize power from solar panels for stable flight operation.</p>
+    </div>
+  </div>
+</body>
+</html>

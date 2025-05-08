@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Certifications</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      margin: 0 10px;
+      padding: 8px 15px;
+      border: 2px solid #4abcad;
+      border-radius: 5px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background: #4abcad;
+      color: white;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .category-buttons button {
+      padding: 10px 20px;
+      border: 2px solid #4abcad;
+      background: none;
+      color: #4abcad;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .category-buttons button.active,
+    .category-buttons button:hover {
+      background: #4abcad;
+      color: white;
+    }
+
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cert-box {
+      text-align: center;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .cert-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .cert-box img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .cert-title {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    #imageModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #imageModal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    #modalClose {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .name-heading {
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav a.active {
+      background: #4abcad; /* Highlight the active button */
+      color: white;
+      border-color: #4abcad;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="name-heading" style="color: rgb(12, 111, 111);">PORTFOLIO</h1>
+    <nav>
+      <a href="web.html" class="name-heading">Home</a>
+      <a href="about.html" class="name-heading">About</a>
+      <a href="quality.html" class="name-heading">Quality</a>
+      <a href="skill.html" class="name-heading">Skill</a>
+      <a href="project.html" class="name-heading">Projects</a>
+      <a href="blog.html" class="name-heading active">Credentials</a>
+      <a href="contact.html" class="name-heading">Contact</a>
+    </nav>
+  </header>
+  <div>
+    <h1 class="name-heading" style="color: rgb(12, 111, 111);"><span>MY CERTIFICATIONS</span></h1>
+  </div>
+
+  <div class="category-buttons">
+    <button class="active" data-category="all">All</button>
+    <button data-category="Courses">Courses</button>
+    <button data-category="Conference">Conference</button>
+    <button data-category="JLPT">JLPT</button>
+    <button data-category="Achievement">Achievement</button>
+  </div>
+
+  <div class="certifications-container">
+    <div class="cert-box Courses">
+      <img src="Introduction to networks.jpg" alt="Networks Certification">
+      <div class="cert-title">Introduction to Networks (2023)</div>
+    </div>
+    <div class="cert-box Courses">
+      <img src="NETACAD.jpg" alt="Cisco Certification">
+      <div class="cert-title">Networking Device and Initial Configurations (2024)</div>
+    </div>
+    <div class="cert-box Courses">
+      <img src="CCNA.jpg" alt="CCNA Certification">
+      <div class="cert-title">CCNA: Switching and Routing Essentials (2025)</div>
+    </div>
+    <div class="cert-box Courses">
+      <img src="AWS.jpg" alt="AWS Certification">
+      <div class="cert-title">AWS Certification (2024)</div>
+    </div>
+    <div class="cert-box Courses">
+      <img src="Introduction To Internet Of Things.jpg" alt="NPTEL Certification">
+      <div class="cert-title">Introduction To Internet Of Things (2024)</div>
+    </div>
+    <div class="cert-box Achievement">
+      <img src="PAPER PRESENTATION - SASURIE.jpg" alt="Paper Presentation">
+      <div class="cert-title">Paper Presentation (2023)</div>
+    </div>
+    <div class="cert-box JLPT">
+      <img src="N5.jpg" alt="Japanese Certification">
+      <div class="cert-title">Japanese Certification (N5)</div>
+    </div>
+    <div class="cert-box Conference">
+      <img src="CONFERENCE-JAI SHRIRAM.jpg" alt="Conference Certification">
+      <div class="cert-title">National Conference PECAR - 2K23 </div>
+    </div>
+  </div>
+
+  <div id="imageModal">
+    <span id="modalClose">&times;</span>
+    <img id="modalImage" src="" alt="Enlarged certificate">
+  </div>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("modalClose");
+
+    document.querySelectorAll(".cert-box img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    modal.onclick = (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    };
+
+    const buttons = document.querySelectorAll(".category-buttons button");
+    const certBoxes = document.querySelectorAll(".cert-box");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const category = button.getAttribute("data-category");
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        certBoxes.forEach(box => {
+          if (category === "all" || box.classList.contains(category)) {
+            box.style.display = "block";
+          } else {
+            box.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

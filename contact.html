@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+      }
+
+      nav a {
+        margin: 0 10px;
+        padding: 8px 15px;
+        border: 2px solid #4abcad;
+        border-radius: 5px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      nav a:hover {
+        background: #4abcad;
+        color: white;
+      }
+
+      .contact-container {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .contact-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: teal;
+      }
+
+      .contact-container p {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 40px;
+      }
+
+      .contact-items {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        opacity: 0; /* Start with hidden */
+        animation: fadeInUp 1s forwards; /* Apply the animation */
+      }
+
+      /* Define the animation */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(50px); /* Start from the bottom */
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0); /* End at original position */
+        }
+      }
+
+      .contact-item {
+        background: white;
+        border: 2px solid #4abcd4;
+        border-radius: 35px;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px #47b6cc; /* Updated shadow color */
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .contact-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(72, 188, 212, 0.3); /* Stronger shadow with updated color */
+      }
+
+      .contact-item i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: teal;
+        display: inline-block;
+        width: 40px; /* Circle width */
+        height: 40px; /* Circle height */
+        line-height: 40px; /* Vertically center the icon */
+        border-radius: 50%; /* Circle shape */
+        background-color: #4abcad; /* Circle background color */
+        color: white; /* Icon color */
+        margin-bottom: 15px; /* Space between icon and text */
+      }
+
+      .contact-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #343a40;
+      }
+
+      .contact-item p {
+        font-size: 1rem;
+        color: #495057;
+      }
+
+      nav a.active {
+        background: #4abcad; /* Highlight the active button */
+        color: white;
+        border-color: #4abcad;
+      }
+
+      .name-heading {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1 class="name-heading" style="color: rgb(12, 111, 111);">PORTFOLIO</h1>
+    <nav>
+      <a href="web.html" class="name-heading">Home</a>
+      <a href="about.html" class="name-heading">About</a>
+      <a href="quality.html" class="name-heading">Quality</a>
+      <a href="skill.html" class="name-heading">Skill</a>
+      <a href="project.html" class="name-heading">Projects</a>
+      <a href="blog.html" class="name-heading">Credentials</a>
+      <a href="contact.html" class="name-heading active">Contact</a>
+    </nav>
+  </header>
+  <div class="contact-container">
+    <h1 class="name-heading">Let's Connect!</h1>
+    <p>If you have any queries related to my projects or anything else, feel free to reach out!</p>
+    <div class="contact-items">
+      <div class="contact-item">
+        <i>&#128205;</i> <!-- Location icon -->
+        <h3 class="name-heading">ADDRESS</h3>
+        <p>5/111(A2),Valliyappampatti,<br>Namakkal,TamilNadu</p>
+      </div>
+      <div class="contact-item">
+        <i>&#128222;</i> <!-- Phone icon -->
+        <h3 class="name-heading">PHONE</h3>
+        <p>+9180 7299 7261</p>
+      </div>
+      <div class="contact-item">
+        <i>&#128231;</i> <!-- Email icon -->
+        <h3 class="name-heading">EMAIL</h3>
+        <p>nishasenthil2707@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <i>&#128204;</i> <!-- LinkedIn icon -->
+        <h3 class="name-heading">LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/nishanthi-s-55915125a/" target="_blank" style="color: teal;">View Profile</a></p>
+      </div>
+      <div class="contact-item">
+        <i>&#128187;</i> <!-- Github icon -->
+        <h3 class="name-heading">Github</h3>
+        <p><a href="https://github.com/NISHANTHISENTHILKUMAR" target="_blank" style="color: teal;">Visit Github</a></p>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

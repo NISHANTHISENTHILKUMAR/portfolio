@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education & Experience</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    nav a {
+      margin: 0 10px;
+      padding: 8px 15px;
+      border: 2px solid #4abcad;
+      border-radius: 5px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #4abcad;
+      color: white;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #00d1b2;
+      position: relative;
+      display: inline-block;
+      font-weight: 900;
+    }
+
+    .section-title h2::before {
+      content: "QUALITY";
+      font-size: 100px;
+      color: rgba(80, 20, 20, 0.05);
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.5);
+      z-index: -1;
+      animation: zoomIn 1.5s ease-out forwards;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: translateX(-50%) scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.05;
+      }
+    }
+
+    .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px 20px 0 20px; /* Less top padding */
+  margin-top: -20px;        /* Lift the whole block up */
+}
+
+
+.column h3 {
+  margin: 5px 0 10px;
+  font-size: 18px;
+}
+
+    .column {
+      max-width: 450px;
+      margin: 10px;
+    }
+
+    .item {
+  border-left: 2px solid #00d1b2;
+  padding: 0 0 0 10px;        /* No vertical padding */
+  margin: 3px 0;              /* Very tight item spacing */
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+  line-height: 1.1;           /* Compact line height */
+}
+
+    .item.delay-1 { animation-delay: 0.2s; }
+    .item.delay-2 { animation-delay: 0.6s; }
+    .item.delay-3 { animation-delay: 1s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .item::before {
+      content: "⭘";
+      position: absolute;
+      left: -11px;
+      top: 0;
+      color: #00d1b2;
+      background: white;
+      border-radius: 50%;
+    }
+
+    
+.item h4 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.1;
+  font-size: 14px;
+}
+
+    .item span {
+      font-weight: bold;
+    }
+
+    .name-heading {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="name-heading" style="color: rgb(12, 111, 111);">PORTFOLIO</h1>
+    <nav>
+      <a href="web.html" class="name-heading">Home</a>
+      <a href="about.html" class="name-heading">About</a>
+      <a href="quality.html" class="name-heading active">Quality</a>
+      <a href="skill.html" class="name-heading">Skill</a>
+      <a href="project.html" class="name-heading">Projects</a>
+      <a href="blog.html" class="name-heading">Credentials</a>
+      <a href="contact.html" class="name-heading">Contact</a>
+    </nav>
+  </header>
+
+  <div class="section-title">
+    <h2 class="name-heading" style="color: rgb(14, 136, 136);"> QUALITY</h2>
+  </div>
+  <div class="content">
+      <div class="column">
+        <h3 class="name-heading">My Education</h3>
+    
+        <div class="item delay-1">
+          <h4>Bachelor of Engineering in ECE</h4>
+          <p><strong>M.Kumarasamy College Of Engineering</strong> | 2022 - 2026</p>
+          <p><span>CGPA :</span> 8.711 ( Till 5th Semester )</p>
+        </div>
+    
+        <div class="item delay-2">
+          <h4>Higher Secondary Certificate</h4>
+          <p><strong>Malar Matric Higher Secondary School</strong> | 2021 - 2022</p>
+          <p><span>Percentage :</span> 92%</p>
+        </div>
+    
+        <div class="item delay-3">
+          <h4>Secondary School Leaving Certificate</h4>
+          <p><strong>Malar Matric Higher Secondary School</strong> | 2019 - 2020</p>
+          <p><span>Percentage :</span> 98.6%</p>
+        </div>
+      </div>
+    
+      <div class="column">
+        <h3 class="name-heading">My Experience</h3>
+    
+        <div class="item delay-1">
+          <h4>VLSI Intern</h4>
+          <p><strong>Tessolve Solution, Chennai</strong> | January 2025 - June 2025</p>
+          <p><span></span> On Going</p>
+        </div>
+    
+        <div class="item delay-2">
+          <h4>Research Intern</h4>
+          <p><strong>National Institute of Technology, Trichy</strong> | May 2025 - July 2025</p>
+          <p><span></span> On Going</p>
+        </div>
+      </div>
+    </div>
+    
+</body>
+</html>
